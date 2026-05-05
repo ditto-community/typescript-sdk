@@ -1,5 +1,5 @@
 {
-  "name": "ditto-sdk",
+  "name": "@tuanzisama/ditto-sdk",
   "version": "1.0.0",
   "description": "Ditto Clipboard Manager Network SDK for TypeScript",
   "type": "module",

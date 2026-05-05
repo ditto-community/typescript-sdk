@@ -4,7 +4,7 @@
  *
  * @example
  * // 发送端示例
- * import { DittoClient, ClipboardFormat } from 'ditto-sdk';
+ * import { DittoClient, ClipboardFormat } from '@tuanzisama/ditto-sdk';
  *
  * const client = new DittoClient({ password: 'myPassword' });
  * await client.connect('192.168.1.100', 23443);
@@ -15,7 +15,7 @@
  *
  * @example
  * // 接收端示例
- * import { DittoServer } from 'ditto-sdk';
+ * import { DittoServer } from '@tuanzisama/ditto-sdk';
  *
  * const server = new DittoServer({
  *   password: 'myPassword',

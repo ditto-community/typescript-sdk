@@ -9,7 +9,7 @@
     "listen": "npx tsx listen-clipboard.ts"
   },
   "dependencies": {
-    "ditto-sdk": "file:..",
+    "@tuanzisama/ditto-sdk": "file:..",
     "tsx": "^4.7.0"
   }
 }

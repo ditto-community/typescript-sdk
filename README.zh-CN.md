@@ -19,7 +19,7 @@
 ## 安装
 
 ```bash
-npm install ditto-sdk
+npm install @tuanzisama/ditto-sdk
 ```
 
 ## 快速上手
@@ -27,7 +27,7 @@ npm install ditto-sdk
 **发送剪贴板：**
 
 ```ts
-import { ClipboardFormat, DittoClient } from 'ditto-sdk'
+import { ClipboardFormat, DittoClient } from '@tuanzisama/ditto-sdk'
 
 const client = new DittoClient({ password: 'secret' })
 await client.connect('192.168.1.100', 23443)
@@ -41,7 +41,7 @@ await client.sendClipboard({
 **接收剪贴板：**
 
 ```ts
-import { DittoServer } from 'ditto-sdk'
+import { DittoServer } from '@tuanzisama/ditto-sdk'
 
 const server = new DittoServer({ password: 'secret', port: 23443 })
 
