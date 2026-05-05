@@ -1,0 +1,41 @@
+{
+  "name": "ditto-sdk",
+  "version": "1.0.0",
+  "description": "Ditto Clipboard Manager Network SDK for TypeScript",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.mts"
+    }
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
+  },
+  "keywords": [
+    "ditto",
+    "clipboard",
+    "network",
+    "sdk"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "typed-struct": "^2.7.1",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "tsdown": "^0.21.10",
+    "typescript": "^5.3.0",
+    "@antfu/eslint-config": "^8.2.0",
+    "eslint": "^10.2.0"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "ditto-sdk-playground",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npx tsx example.ts server",
+    "client": "npx tsx example.ts client",
+    "server": "npx tsx example.ts server",
+    "listen": "npx tsx listen-clipboard.ts"
+  },
+  "dependencies": {
+    "ditto-sdk": "file:..",
+    "tsx": "^4.7.0"
+  }
+}
