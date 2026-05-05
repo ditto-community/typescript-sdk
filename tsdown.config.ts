@@ -5,13 +5,8 @@ export default defineConfig({
   outDir: 'dist',
   format: ['cjs', 'esm'],
   dts: true,
-  splitting: false,
   sourcemap: true,
   minify: false,
   clean: true,
-  outDirTypes: 'dist/types',
-  rollupOptions: {
-    external: ['winston', 'node'],
-  },
   shims: true,
 })
