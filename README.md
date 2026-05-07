@@ -11,7 +11,6 @@ TypeScript SDK for [Ditto](https://github.com/sabrogden/Ditto) clipboard manager
 
 - **DittoClient** — connects to a remote Ditto instance and sends clipboard data
 - **DittoServer** — listens for incoming clipboard data from Ditto clients
-- **FriendsManager** — manages a friend list and handles peer-to-peer clipboard sharing
 - **AES encryption** — all network traffic is encrypted with a shared password
 
 The protocol speaks the same wire format as the native C++ Ditto app, so this SDK can interoperate with it directly.
@@ -19,7 +18,7 @@ The protocol speaks the same wire format as the native C++ Ditto app, so this SD
 ## Install
 
 ```bash
-npm install @tuanzisama/ditto-sdk
+npm install @ditto-community/typescript-sdk
 ```
 
 ## Quick Start
@@ -27,7 +26,7 @@ npm install @tuanzisama/ditto-sdk
 **Send clipboard:**
 
 ```ts
-import { ClipboardFormat, DittoClient } from '@tuanzisama/ditto-sdk'
+import { ClipboardFormat, DittoClient } from '@ditto-community/typescript-sdk'
 
 const client = new DittoClient({ password: 'secret' })
 await client.connect('192.168.1.100', 23443)
@@ -41,7 +40,7 @@ await client.sendClipboard({
 **Receive clipboard:**
 
 ```ts
-import { DittoServer } from '@tuanzisama/ditto-sdk'
+import { DittoServer } from '@ditto-community/typescript-sdk'
 
 const server = new DittoServer({ password: 'secret', port: 23443 })
 
@@ -51,18 +50,6 @@ server.on('receive', (data) => {
 
 await server.start()
 ```
-
-## API Overview
-
-| Module | Description |
-|--------|-------------|
-| `DittoClient` | Connect and send clipboard data to a Ditto server |
-| `DittoServer` | Listen for and receive clipboard data |
-| `ClipboardFormat` | Create clipboard format payloads (text, bitmap, files, etc.) |
-| `FriendsManager` | Manage peer list and route clipboard to friends |
-| `AESEncryption` | Low-level encryption utilities |
-| `MessageBuilder` | Construct protocol messages |
-| `FileSender` / `FileReceiver` | Transfer files over the clipboard protocol |
 
 ## Build
 
@@ -83,4 +70,4 @@ All messages are AES-encrypted using a shared password. See the source under `sr
 
 ## License
 
-MIT
+GPL-3.0
